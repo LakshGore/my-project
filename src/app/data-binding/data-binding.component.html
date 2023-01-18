@@ -1,0 +1,30 @@
+<p>data-binding works!</p>
+<h1>months:</h1>
+<div>
+  <select name="months" id="months">
+    <option value="" *ngFor="let i of months">{{ i }}</option>
+  </select>
+</div>
+<div>
+  <br />
+  <br />
+  <span *ngIf="isavailable">"This is example of *ngIf": </span>
+</div>
+
+<div>
+  <br />
+  <br />
+  
+  <span *ngIf="check; then condition2 else condition1">
+    "This is example of *ngIf - then- else":
+  </span>
+  <ng-template #condition1>
+    "data-binding is working":
+  </ng-template>
+  
+  <ng-template #condition2>
+    "data-binding is working again":
+  </ng-template>
+  <br>
+  <button onclick="change()">Click me</button> 
+</div>
